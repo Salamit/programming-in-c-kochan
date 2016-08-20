@@ -1,0 +1,20 @@
+// Example 4 from Chapter 4 of Programming in C, 3rd Edition
+// File 4eg4.c
+
+/* This program illustrates the Modulus Operator */
+
+// The modulus Operator
+
+#include <stdio.h>
+
+int main (void)
+{
+	int a = 25, b = 5, c = 10, d = 7;
+
+	printf("a %% b = %i\n", a % b);
+	printf("a %% c = %i\n", a % c);
+	printf("a %% d = %i\n", a % d);
+	printf("a / d * d + a %% d = %i\n", a / d * d + a % d);
+
+	return 0;
+}
