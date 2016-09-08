@@ -1,8 +1,8 @@
-My answers to Programming in C (3rd Edition) by Stephen G. Kochan.
+My answers to Programming in C (3rd Edition) by Stephen G. Kochan as part of the required reading for the Harvard cs50 course.
 
-Having searched for recent answers to the exercises I have put this on the web in the hopes that it can be of assistance to others. Feel free to message me if the code could be better.  
+Having searched for recent answers to the exercises I have here in the hopes that it can be of assistance to others. Feel free to message me if the code could be better.  
 
-I completing this book as part of the required reading for the Harvard cs50 course.
+You will find the book examples and exercises here. In each folder chapter is a folder for the book examples and a separate folder for the book exercises. 
 
 Long live bytes!
 
