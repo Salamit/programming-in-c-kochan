@@ -1,4 +1,4 @@
-This is my compilation of answers to the exercises from the book: Programming in C (3rd Edition) by Stephen G. Kochan.
+My answers to Programming in C (3rd Edition) by Stephen G. Kochan.
 
 Having searched for recent answers to the exercises I have put this on the web in the hopes that it can be of assistance to others. Feel free to message me if the code could be better.  
 
