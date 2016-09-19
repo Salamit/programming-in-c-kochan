@@ -20,7 +20,7 @@ int main(void)
 				isPrime = false;
 
 			if ( isPrime != false )
-				printf("%i ", p );
+				printf("%i", p );
 
 
 	}
