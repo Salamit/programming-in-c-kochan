@@ -1,7 +1,7 @@
-// Example 4 from Chapter 7 of Programming in C, 3rd Edition
+// Exercise 10 from Chapter 8 of Programming in C, 3rd Edition
 // File 8ex10.c
 
-// Modified program to generate prime numbers
+// Program to check if a number is a prime and return '1' if it is and '0' if it isn't
 
 #include <stdio.h>
 #include <stdbool.h>

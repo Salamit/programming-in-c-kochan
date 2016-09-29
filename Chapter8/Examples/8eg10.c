@@ -9,6 +9,8 @@ int minimum (int values[], int numberOfElements)
 {
 	int minValue, i;
 
+	printf("%i\n", numberOfElements);
+
 	minValue = values[0];
 
 	for ( i = 1; i < numberOfElements; ++i )

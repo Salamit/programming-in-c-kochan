@@ -20,10 +20,18 @@ void sort (int a[], int n)
 
 int main (void)
 {
+	char order;
 	int i;
 	int array[16] = { 34, -5, 6, 0, 12, 100, 56, 22,
 					  44, -3, -9, 12, 17, 22, 6, 11 };
-	void sort (int a[], int n);
+
+
+	printf("To sort in ascending order input 'a'\n");
+	printf("To sort in descending order input 'd'\n");
+	scanf("%c", &order)
+
+
+	void sort (int a[], int n, char order);
 
 	printf("The array before the sort:\n");
 
