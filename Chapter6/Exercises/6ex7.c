@@ -38,5 +38,3 @@ int main (void)
 	return 0;
 }
 
-
-//inner for loop
