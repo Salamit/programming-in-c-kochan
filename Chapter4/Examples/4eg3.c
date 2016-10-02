@@ -19,3 +19,4 @@ int main (void)
 	printf("c / d * d = %f\n", c / d * d);
 	printf("-a = %i\n", -a);
 }
+
