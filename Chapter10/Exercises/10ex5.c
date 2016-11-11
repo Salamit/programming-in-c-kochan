@@ -1,104 +1,95 @@
 // Exercise 5 from Chapter 10 of Programming in C, 3rd Edition
 // File 10ex5.c
 
-// Program to extract a portion of a character string.
+// Program to determine if one character string exists inside another string.
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 
-char result[20];
-int i;
-bool characterEquality = true;
+char location[20];
+bool characterEquality;
+int i = 0;											//counter for character string 1
 
 int main(void)
 {
-	void findString (const char str1[], const char str2[]);
+	/*bool*/ int stillFound;
 
-	findString ("a chatterbox", "that"); 
+	int findString (const char s1[], const char s2[]);
+
+	//do 
+	//{
+		stillFound = findString("thewrong son", " ");
+			//if(characterEquality == true)
+				printf("%d\n", stillFound);
+	//}
+	//while ( stillFound == true );
+
+	
 
 
-	//for (i = 0; result[i] != '\0' ; ++i )
-	//	printf("%c", result[i]);
-
-	if(characterEquality)
-		printf("%d\n", i - 1);
-
+/*
 	else
 		printf("%d\n", -1);
-	
+
+		*/
+
 	return 0;
+
 }
 
-void findString (const char str1[], const char str2[])
+int findString (const char source[], const char s1[])
 {
-
-	int x, j, count, n = strlen(str2); //strlen factors in the null zero in calculating the length of the string
-	i = 0;								//As such a string like "eat" would return a length of 3
-	j = 0;
+	//start with the first character of s1. Is it equal to the fitst character of s2
+	 
+	int h = 0;											//counter for character string 2
+	int s1len = strlen(s1); 							//string length of string 2
+	int c, holder = 0;
 	char temp[20];
 
-	for (i = 0; str1[i] != '\0' && str2[j] != '\0'; i++)
+	while(source[i] != '\0' && s1[h] != '\0')
 	{
-		if(str1[i] == str2[j])
+		if( source[i] == s1[h] )
 		{
 			characterEquality = true;
+			//save characters of length n = strlen(s2) in temp array
+			holder = i;
 
-			int holder = i; 										//a holder for the existing value of i, which leaves i unchanged
-			for(x = 0; x <= (n - 1); x++, holder++)					//saves the next x characters into a temp array
-				temp[x] = str1[holder];
-				//save a null zero in the last character of the temp
+			for(int c = 0; c < s1len; c++, holder++)
+				temp[c] = source[holder];
 
-			while( characterEquality && str2[j] != '\0' ) //Note: I ran into Bus 10 errors because I lacked str2[j] != '\0'
+			for(c = 0, h = 0; temp[c] != '\0' && characterEquality && s1[h] != '\0'; c++, h++)
 			{
-				for(x = 0; x <= (n - 1); x++, j++ )
-				{
-					if(temp[x] == str2[j])   					//compares the characters saved in the temp aray against the characters of string 2
-					{											//if the same, the character is saved in the result string
-						result[j] = temp[x];
-					}					
-
-					else
+				if (temp[c] == s1[h])
 					{
-						for(count = 0; count < j; count++)
-						result[count] = '\0';
-						j = 0;
-						characterEquality = false;
-
+						characterEquality = true;
+						//save s1[p] to an array that contains all the location in the source string where the string was found.
 					}
-				}
 
-				result[n] = '\0';
+				else if (temp[c] != s1[h])
+					characterEquality = false;
+
 			}
-		}
-	}
-
-	/*
-	while(str1[i] != '\0' || str2[j] != '\0')
-	{
-		if(str1[i] == str2[j] && areEqual)
-		{
-			result[j] = str1[i];
-			++i;
-			++j;
-			areEqual = true;
-
 		}
 
 		else
 		{
-			++i;
-			j = 0;
-			areEqual = false;
-
+			characterEquality = false;
+			
 		}
 
-
+		i++;
 	}
-	*/
 
-	
-	
+	if(characterEquality == true)
+		return i - 1; 	//So as to show the true value of i, it is needed to reduce i by one 
+						//to rectify the increment of i in the while loop in the findString function
 
+	else
+		return -1;		
+	
 }
+
+
+
 

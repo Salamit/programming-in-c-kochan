@@ -23,7 +23,7 @@ int main()
 void removeString( const char source[], int startingIndex, int charactersToRemove )
 {
 	int i, j;
-	int n = startingIndex + charactersToRemove;		 						//the next character to start from
+	int n = startingIndex + charactersToRemove;		 						//the next character to start from after removal
 
 	//save every character from source string until you hit the starting index
 
@@ -45,5 +45,7 @@ void removeString( const char source[], int startingIndex, int charactersToRemov
 
 
 }
+
+
 
 
